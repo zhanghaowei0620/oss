@@ -33,6 +33,18 @@ class ContController extends Controller
 
 
 
+    public function video(){
+        $id = $_GET['id'];
+        $v = VideoModel::where('vid',$id)->first()->toArray();
+        //print_r($v);exit;
+        $data = [
+            'v'=>$v
+        ];
+        return view('video/video',$data);
+    }
+
+
+
 
 
 

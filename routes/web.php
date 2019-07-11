@@ -19,3 +19,4 @@ Route::get('/oss1','Video\VideoController@oss1');
 Route::get('/oss2','Video\VideoController@oss2');
 
 Route::get('/cont','Cont\ContController@cont');
+Route::get('/video','Cont\ContController@video');
