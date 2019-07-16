@@ -26,4 +26,18 @@ class VideoController extends Controller
         $rs=$client->uploadFile($this->bucket,$obj,$local_file);
         var_dump($rs);
     }
+
+
+
+
+    /**oss事件推送异步回调*/
+    public function ossNotify(){
+        $json = file_get_contents("php://input");
+        $log_str = date("Y-m-d H:i:s") . ' >>>>> ' .$json . "\n";
+        file_put_contents("logs/oss.log",$log_str,FILE_APPEND);
+    }
+
+    public function test(){
+        echo 111;
+    }
 }
