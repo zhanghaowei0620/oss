@@ -31,7 +31,7 @@ class VideoController extends Controller
 
 
     /**oss事件推送异步回调*/
-    public function ossNotify(){
+    public function notify(){
         $json = file_get_contents("php://input");
         $log_str = date("Y-m-d H:i:s") . ' >>>>> ' .$json . "\n";
         file_put_contents("logs/oss.log",$log_str,FILE_APPEND);

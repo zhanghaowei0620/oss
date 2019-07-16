@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/oss1','Video\VideoController@oss1');
 Route::get('/oss2','Video\VideoController@oss2');
 
-Route::get('/notify','Video\VideoController@ossNotify');    //oss事件推送
+Route::post('/notify','Video\VideoController@notify');    //oss事件推送
 
 
 Route::get('/test','Video\VideoController@test');
