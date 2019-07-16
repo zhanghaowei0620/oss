@@ -8,8 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <video src="storage/{{$v['path']}}" controls="controls"></video>
-    </div>
+<div>
+    <video src="{{env('CDN_HOST')}}/{{$v['path']}}" controls="controls"></video>
+</div>
 </body>
 </html>
